@@ -57,6 +57,27 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        military: {
+          dark: "hsl(var(--military-green-dark))",
+          DEFAULT: "hsl(var(--military-green))",
+          light: "hsl(var(--military-green-light))",
+          glow: "hsl(var(--military-green-glow))",
+        },
+        tactical: {
+          amber: "hsl(var(--tactical-amber))",
+          "amber-dim": "hsl(var(--tactical-amber-dim))",
+          red: "hsl(var(--tactical-red))",
+          blue: "hsl(var(--tactical-blue))",
+        },
+        hud: {
+          green: "hsl(var(--hud-green))",
+        },
+      },
+      fontFamily: {
+        sans: ['Cairo', 'sans-serif'],
+        tactical: ['Orbitron', 'monospace'],
+        mono: ['JetBrains Mono', 'monospace'],
+        arabic: ['Cairo', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +86,42 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(120 60% 40% / 0.3)" },
+          "50%": { boxShadow: "0 0 30px hsl(120 60% 40% / 0.5)" },
+        },
+        "scan-line": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+        "blink": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "scan-line": "scan-line 2s linear infinite",
+        "blink": "blink 1s step-end infinite",
+      },
+      backgroundImage: {
+        "gradient-military": "var(--gradient-military)",
+        "gradient-card": "var(--gradient-card)",
+        "gradient-accent": "var(--gradient-accent)",
+      },
+      boxShadow: {
+        "glow": "var(--shadow-glow)",
+        "card": "var(--shadow-card)",
+        "accent": "var(--shadow-accent)",
       },
     },
   },
