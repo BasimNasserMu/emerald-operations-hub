@@ -59,7 +59,7 @@ export function Dashboard() {
     <div className="p-6 space-y-6 hud-grid min-h-full">
       {/* Header */}
       <div className={cn("flex items-center justify-between", isRTL && "flex-row-reverse")}>
-        <div className={cn(isRTL && "text-right")}>
+        <div className={cn(isRTL && "text-right")} dir={isRTL ? "rtl" : "ltr"}>
           <h1 className="text-2xl font-tactical font-bold tracking-wider text-foreground">
             {t('dashboard')}
           </h1>
